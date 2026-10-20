@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sổ tay quản lý cửa hàng — vận hành, tồn kho, dòng tiền</title>
+<meta name="description" content="Sổ tay thực hành cho chủ cửa hàng nhỏ: kiểm kê tồn kho, đối chiếu tiền mặt cuối ca, quản lý nhân viên và đọc báo cáo lãi lỗ theo mặt hàng.">
+<link rel="canonical" href="https://hakiet.github.io/so-tay-quan-ly-cua-hang/">
+<style>
+:root{--ink:#17202a;--muted:#5b6b7b;--line:#e2e8ee;--bg:#fbfcfd;--accent:#0b6bcb}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:40px 20px 80px}
+h1{font-size:2rem;line-height:1.2;margin:0 0 .4em}
+h2{font-size:1.25rem;margin:2em 0 .5em}
+p{margin:0 0 1em}
+a{color:var(--accent)}
+.lead{font-size:1.1rem;color:var(--muted)}
+ul{padding-left:1.2em}
+li{margin:.4em 0}
+.cards{display:grid;gap:14px;margin:2em 0}
+.card{border:1px solid var(--line);border-radius:10px;padding:16px 18px;background:#fff}
+.card a{font-weight:600;text-decoration:none}
+.card p{margin:.3em 0 0;color:var(--muted);font-size:.95rem}
+footer{margin-top:3em;padding-top:1.5em;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<main>
+<h1>Sổ tay quản lý cửa hàng</h1>
+<p class="lead">Bốn việc quyết định cửa hàng nhỏ có lãi hay không: biết mình còn bao nhiêu hàng, biết quầy thu được bao nhiêu tiền, biết ca nào lệch, và biết mặt hàng nào thực sự sinh lời. Mỗi bài dưới đây là một quy trình làm được ngay, không cần phần mềm đắt tiền.</p>
+
+<div class="cards">
+  <div class="card">
+    <a href="kiem-ke-ton-kho-dinh-ky.html">Kiểm kê tồn kho định kỳ: quy trình 5 bước cho cửa hàng nhỏ</a>
+    <p>Cách chốt số tồn thực tế, xử lý chênh lệch và chặn thất thoát trước khi nó thành thói quen.</p>
+  </div>
+  <div class="card">
+    <a href="doi-chieu-tien-mat-cuoi-ca.html">Đối chiếu tiền mặt cuối ca: mẫu quy trình chống thất thoát</a>
+    <p>Bàn giao ca, kiểm tiền, ghi lệch — làm trong 10 phút thay vì tin vào trí nhớ.</p>
+  </div>
+  <div class="card">
+    <a href="quan-ly-ca-ban-va-nhan-vien.html">Quản lý ca bán và nhân viên: phân quyền, chấm công, trách nhiệm</a>
+    <p>Ai được sửa giá, ai được hủy đơn, ai chịu trách nhiệm khi quỹ thiếu.</p>
+  </div>
+  <div class="card">
+    <a href="bao-cao-lai-lo-theo-mat-hang.html">Báo cáo lãi lỗ theo mặt hàng: tìm ra nhóm hàng đang nuôi cả cửa hàng</a>
+    <p>Doanh thu không phải lợi nhuận. Cách tính đúng giá vốn và chi phí trên từng dòng hàng.</p>
+  </div>
+</div>
+
+<h2>Vì sao bốn việc này đi cùng nhau</h2>
+<p>Kiểm kê cho biết hàng đang ở đâu. Đối chiếu tiền cho biết tiền có khớp với hàng đã bán. Phân quyền ca cho biết ai chịu trách nhiệm ở từng bước. Báo cáo lãi lỗ cho biết nên nhập thêm hay bỏ bớt. Thiếu một mắt, ba mắt còn lại vẫn có thể đúng trên giấy nhưng sai ngoài quầy.</p>
+<p>Cửa hàng nhỏ thường bỏ qua vì nghĩ "mình nhớ hết". Thực tế, sai lệch tích tụ từ những khoản nhỏ: một ly trà sữa không nhập bill, một hộp sữa hết hạn bị bỏ, một lần bán nợ không ghi. Sau một quý, khoản đó đủ lớn để ăn hết biên lợi nhuận.</p>
+
+<h2>Bắt đầu từ đâu</h2>
+<p>Nếu mới bắt đầu, đừng làm cả bốn. Chọn đối chiếu tiền mặt cuối ca trước, vì nó tốn ít thời gian nhất và phát hiện lỗi nhanh nhất. Sau hai tuần ổn định, thêm kiểm kê định kỳ. Khi số liệu đã sạch, mới đọc báo cáo lãi lỗ — đọc trên dữ liệu bẩn chỉ dẫn tới quyết định sai.</p>
+
+<h2>Công cụ</h2>
+<p>Bảng tính đủ dùng cho cửa hàng một quầy. Khi số mặt hàng vượt vài trăm, hoặc có nhiều ca và nhiều nhân viên, thao tác thủ công bắt đầu sinh lỗi. Lúc đó nên chuyển sang phần mềm bán hàng có sẵn các nghiệp vụ này, ví dụ <a href="https://www.phanmempos.com/san-pham/phan-mem-quan-ly-ban-hang-offline-ebiz-pos">phần mềm quản lý bán hàng offline</a> hoặc module <a href="https://www.phanmempos.com/san-pham/phan-mem-quan-ly-kho-offline-kiem-soat-ton-kho-giam-that-thoat-hieu-qua">quản lý kho và kiểm soát tồn</a>.</p>
+
+<footer>Sổ tay quản lý cửa hàng — tổng hợp từ vận hành thực tế các mô hình bán lẻ offline tại Việt Nam.</footer>
+</main>
+</body>
+</html>

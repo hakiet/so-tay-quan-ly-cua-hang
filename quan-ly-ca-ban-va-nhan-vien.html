@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quản lý ca bán và nhân viên: phân quyền, chấm công, trách nhiệm</title>
+<meta name="description" content="Phân quyền nhân viên theo ca: ai được sửa giá, hủy đơn, xem báo cáo. Chấm công, trách nhiệm quỹ và cách xử lý khi thiếu tiền.">
+<link rel="canonical" href="https://hakiet.github.io/so-tay-quan-ly-cua-hang/quan-ly-ca-ban-va-nhan-vien.html">
+<style>
+:root{--ink:#17202a;--muted:#5b6b7b;--line:#e2e8ee;--bg:#fbfcfd;--accent:#0b6bcb}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:40px 20px 80px}
+h1{font-size:2rem;line-height:1.2;margin:0 0 .4em}
+h2{font-size:1.25rem;margin:2em 0 .5em}
+p{margin:0 0 1em}
+a{color:var(--accent)}
+.lead{font-size:1.08rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:.95rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left}
+th{background:#f1f5f9}
+footer{margin-top:3em;padding-top:1.5em;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<main>
+<h1>Quản lý ca bán và nhân viên: phân quyền, chấm công, trách nhiệm</h1>
+<p class="lead">Cửa hàng nhỏ hay giao toàn bộ quyền cho mọi nhân viên vì "tin nhau". Đến khi mất tiền mới biết tin nhau không phải là quy trình.</p>
+
+<h2>Phân quyền theo vai trò</h2>
+<table>
+<tr><th>Thao tác</th><th>Thu ngân</th><th>Ca trưởng</th><th>Chủ cửa hàng</th></tr>
+<tr><td>Bán hàng, in bill</td><td>Có</td><td>Có</td><td>Có</td></tr>
+<tr><td>Sửa giá, giảm giá</td><td>Không</td><td>Trong hạn mức</td><td>Có</td></tr>
+<tr><td>Hủy đơn, trả hàng</td><td>Không</td><td>Có, kèm lý do</td><td>Có</td></tr>
+<tr><td>Xem báo cáo lãi lỗ</td><td>Không</td><td>Ca của mình</td><td>Toàn bộ</td></tr>
+<tr><td>Sửa tồn kho</td><td>Không</td><td>Không</td><td>Có</td></tr>
+</table>
+<p>Nguyên tắc: ai làm sai thao tác nào thì thao tác đó phải nằm ngoài quyền của họ. Sửa giá là con đường thất thoát nhanh nhất — mỗi lần giảm giá không lý do là một lần tiền rời két hợp pháp.</p>
+
+<h2>Chấm công gắn với ca, không gắn với miệng</h2>
+<p>Giờ vào, giờ ra, đi muộn, về sớm phải ghi theo ca thực tế. Bảng công tính lương, nhưng quan trọng hơn là để biết ai đang ở quầy khi sự cố xảy ra. Thiếu tiền ca chiều mà không biết ca chiều có ai thì điều tra kiểu gì.</p>
+
+<h2>Trách nhiệm quỹ theo ca</h2>
+<p>Mỗi ca có một người chịu trách nhiệm quỹ, kể cả khi quầy có hai người bán. Hai người cùng chịu trách nhiệm nghĩa là không ai chịu trách nhiệm. Lệch trong ngưỡng thì ghi nhận, lệch vượt ngưỡng thì người chịu trách nhiệm quỹ giải trình trước, rồi mới xét đến các nguyên nhân khác.</p>
+
+<h2>Xử lý vi phạm: viết trước, phạt sau</h2>
+<p>Mọi quy định (không tự ý giảm giá, không bán nợ khi chưa được duyệt, không bỏ bill) phải viết thành văn bản một trang, nhân viên ký đã đọc. Lần đầu nhắc, lần hai cảnh cáo có ghi nhận, lần ba mới phạt. Phạt ngay lần đầu với quy định chưa từng viết ra chỉ tạo bất mãn.</p>
+<p>Với cửa hàng tạp hóa nhiều ca, nhiều mặt hàng nhỏ dễ nhầm, nên tham khảo cách các <a href="https://www.phanmempos.com/san-pham/phan-mem-quan-ly-ban-hang-tap-hoa-offline">cửa hàng tạp hóa quản lý ca và tồn offline</a> bằng <a href="https://www.phanmempos.com/san-pham/phan-mem-quan-ly-ban-hang-offline-ebiz-pos">phần mềm quản lý bán hàng offline</a>: mỗi nhân viên một tài khoản, quyền riêng, mọi thao tác sửa giá hủy đơn đều lưu vết.</p>
+
+<p><a href="index.html">← Về trang chủ sổ tay</a></p>
+<footer>Sổ tay quản lý cửa hàng.</footer>
+</main>
+</body>
+</html>
