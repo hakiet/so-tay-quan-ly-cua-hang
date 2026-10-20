@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quản lý bảo hành và đổi trả: phiếu, hạn, và chi phí thật</title>
+<meta name="description" content="Quy trình quản lý bảo hành, đổi trả hàng: ghi phiếu, tính hạn, tách chi phí bảo hành khỏi chi phí bán hàng.">
+<link rel="canonical" href="https://hakiet.github.io/so-tay-quan-ly-cua-hang/quan-ly-bao-hanh-va-doi-tra.html">
+<style>
+:root{--ink:#17202a;--muted:#5b6b7b;--line:#e2e8ee;--bg:#fbfcfd;--accent:#0b6bcb}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:40px 20px 80px}
+h1{font-size:2rem;line-height:1.2;margin:0 0 .4em}
+h2{font-size:1.25rem;margin:2em 0 .5em}
+p{margin:0 0 1em}
+a{color:var(--accent)}
+.lead{font-size:1.08rem;color:var(--muted)}
+ul,ol{padding-left:1.2em}
+li{margin:.4em 0}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:.95rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f1f5f9}
+footer{margin-top:3em;padding-top:1.5em;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<main>
+<h1>Bảo hành và đổi trả: quản lý bằng phiếu, không bằng trí nhớ</h1>
+<p class="lead">Bảo hành là khoản chi phí bị che khuất nhiều nhất trong cửa hàng bán lẻ. Nó không hiện trên bill bán, chỉ hiện ở cuối quý dưới dạng hàng tồn hỏng và tiền hoàn.</p>
+<h2>1. Mỗi lần bảo hành là một phiếu, không phải một cuộc gọi</h2>
+<p>Khách gọi điện, nhân viên hứa, rồi quên. Cách chặn: mọi tiếp nhận bảo hành phải tạo phiếu có mã, ghi serial/IMEI, ngày nhận, lỗi khách mô tả, và hạn trả. Không có phiếu thì không có trách nhiệm.</p>
+
+<h2>2. Phân biệt bốn loại khiếu nại</h2>
+<table>
+<tr><th>Loại</th><th>Ai chịu chi phí</th><th>Ghi nhận</th></tr>
+<tr><td>Lỗi nhà sản xuất</td><td>Nhà cung cấp</td><td>Gửi bảo hành, theo dõi công nợ NCC</td></tr>
+<tr><td>Lỗi do vận chuyển</td><td>Cửa hàng / đơn vị vận chuyển</td><td>Chi phí nội bộ</td></tr>
+<tr><td>Lỗi do người dùng</td><td>Khách</td><td>Báo giá sửa trước khi làm</td></tr>
+<tr><td>Đổi ý</td><td>Cửa hàng (theo chính sách)</td><td>Tính vào chi phí bán hàng</td></tr>
+</table>
+<p>Gộp bốn loại này vào một mục "bảo hành" làm báo cáo lãi lỗ sai. Lỗi nhà sản xuất là công nợ phải thu, không phải chi phí.</p>
+
+<h2>3. Hạn bảo hành: tính từ ngày giao, không phải ngày sản xuất</h2>
+<p>Khách nhớ ngày mua, không nhớ ngày sản xuất. Nếu cửa hàng tính hạn từ ngày sản xuất, khách sẽ mất quyền lợi oan và mất niềm tin. Ghi ngày bán trên phiếu; khi khách đến, tra theo serial là ra ngay.</p>
+
+<h2>4. Hàng bảo hành tồn: đếm hằng tuần</h2>
+<p>Hàng nhận bảo hành nhưng chưa xử lý sẽ nằm trong kho, chiếm chỗ, và dễ thất lạc. Đếm hằng tuần theo trạng thái: đang chờ NCC, đang chờ khách, đã xử lý chờ trả. Bất kỳ món nào ở trạng thái "chờ" quá 30 ngày phải có người chịu trách nhiệm cụ thể.</p>
+
+<h2>5. Chi phí bảo hành thật: đo bằng tỉ lệ, không bằng số tiền</h2>
+<p>Tỉ lệ bảo hành = số phiếu bảo hành / số đơn bán, tính theo từng nhóm hàng. Nhóm có tỉ lệ trên 5% là nhóm nên xem lại nhà cung cấp, không phải nhóm nên tăng giá. Tăng giá để bù bảo hành chỉ làm mất khách, không sửa được nguồn hàng.</p>
+<p>Khi số bàn, số ca hoặc số khách quen tăng lên, sổ tay giấy bắt đầu thua thiệt. Lúc đó nên dùng <a href="https://www.phanmempos.com/san-pham/phan-mem-quan-ly-bao-hanh-offline-toi-uu-quy-trinh-nang-cao-chat-luong-dich-vu">phần mềm quản lý bảo hành</a>, <a href="https://www.phanmempos.com/san-pham/phan-mem-quan-ly-the-thanh-vien-tich-diem-giu-chan-khach-hang-tang-doanh-thu">phần mềm thẻ thành viên tích điểm</a>, <a href="https://www.phanmempos.com/san-pham/phan-mem-quan-ly-ban-hang-offline-ebiz-pos">phần mềm quản lý bán hàng offline</a>.</p>
+<p><a href="index.html">← Về trang chủ sổ tay</a></p>
+<footer>Sổ tay quản lý cửa hàng.</footer>
+</main>
+</body>
+</html>

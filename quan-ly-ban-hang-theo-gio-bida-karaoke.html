@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bán hàng theo giờ: quản lý bida, karaoke không thất thu</title>
+<meta name="description" content="Cách quản lý quán bida, karaoke tính tiền theo giờ: chống chạy giờ, kiểm soát phòng trống, đối chiếu doanh thu cuối ca.">
+<link rel="canonical" href="https://hakiet.github.io/so-tay-quan-ly-cua-hang/quan-ly-ban-hang-theo-gio-bida-karaoke.html">
+<style>
+:root{--ink:#17202a;--muted:#5b6b7b;--line:#e2e8ee;--bg:#fbfcfd;--accent:#0b6bcb}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:40px 20px 80px}
+h1{font-size:2rem;line-height:1.2;margin:0 0 .4em}
+h2{font-size:1.25rem;margin:2em 0 .5em}
+p{margin:0 0 1em}
+a{color:var(--accent)}
+.lead{font-size:1.08rem;color:var(--muted)}
+ul,ol{padding-left:1.2em}
+li{margin:.4em 0}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:.95rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f1f5f9}
+footer{margin-top:3em;padding-top:1.5em;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<main>
+<h1>Quán bida, karaoke: quản lý tiền theo giờ không thất thu</h1>
+<p class="lead">Mô hình tính tiền theo giờ có một điểm yếu cố hữu: doanh thu phụ thuộc vào việc ai đó bấm giờ đúng. Không có cơ chế đối chiếu, mỗi ca mất vài chục phút là chuyện bình thường.</p>
+<h2>1. Mở bàn/ mở phòng phải tự động ghi giờ</h2>
+<p>Nếu giờ bắt đầu do nhân viên bấm, sẽ có lúc quên bấm. Nếu quên, giờ được tính từ lúc phát hiện — và phần chênh lệch do chính nhân viên quyết định. Giải pháp: giờ bắt đầu gắn với thao tác mở bàn trên hệ thống, không gắn với đồng hồ treo tường.</p>
+
+<h2>2. Ba con số phải khớp cuối ca</h2>
+<table>
+<tr><th>Số liệu</th><th>Nguồn</th><th>Dùng để</th></tr>
+<tr><td>Tổng giờ bán</td><td>Hệ thống tính giờ</td><td>Đối chiếu với doanh thu</td></tr>
+<tr><td>Doanh thu dịch vụ</td><td>Bill / phiếu thu</td><td>Tính giá vốn giờ</td></tr>
+<tr><td>Doanh thu hàng hóa</td><td>Xuất kho bán lẻ</td><td>Tách lãi bán hàng và lãi giờ</td></tr>
+</table>
+<p>Nếu tổng giờ bán × giá giờ không khớp doanh thu dịch vụ, phải tìm ra chênh lệch ngay trong ca. Để sang hôm sau là mất dấu.</p>
+
+<h2>3. Phòng trống và phòng bảo trì</h2>
+<p>Phòng hỏng, phòng dọn, phòng giữ cho khách quen — cả ba đều phải có trạng thái trên hệ thống. Nếu chỉ ghi trong đầu, nhân viên ca sau sẽ mở nhầm hoặc bán trùng. Một phòng ở trạng thái "bảo trì" quá 7 ngày là tín hiệu cần xử lý, không phải tín hiệu bình thường.</p>
+
+<h2>4. Giờ cao điểm: đặt giá theo khung, không giảm giá theo khung</h2>
+<p>Bida và karaoke có khung giờ vàng rõ ràng (19h–23h). Nên đặt giá cao hơn cho khung này và giá thấp hơn cho khung trưa, thay vì giảm giá đồng loạt để kéo khách. Giảm giá đồng loạt làm mất lãi ở khung đông nhất — nơi không cần kéo khách.</p>
+
+<h2>5. Đồ uống: nguồn lãi chính, cần kiểm riêng</h2>
+<p>Ở quán bida và karaoke, lãi từ đồ uống thường lớn hơn lãi từ giờ chơi. Vì vậy phải kiểm đồ uống theo cách riêng: đếm vỏ chai/keg so với bill, và theo dõi tỉ lệ đồ uống trên mỗi giờ bán. Tỉ lệ này tụt đột ngột là dấu hiệu pha chế sai định lượng hoặc thất thoát.</p>
+<p>Khi số bàn, số ca hoặc số khách quen tăng lên, sổ tay giấy bắt đầu thua thiệt. Lúc đó nên dùng <a href="https://www.phanmempos.com/san-pham/phan-mem-quan-ly-bida-offline-toi-uu-van-hanh-tang-truong-doanh-thu">phần mềm quản lý bida</a>, <a href="https://www.phanmempos.com/san-pham/phan-mem-quan-ly-karaoke-ebizkaraoke-toi-uu-van-hanh-tang-truong-doanh-thu">phần mềm quản lý karaoke</a>, <a href="https://www.phanmempos.com/san-pham/phan-mem-quan-ly-ban-hang-offline-ebiz-pos">phần mềm quản lý bán hàng offline</a>.</p>
+<p><a href="index.html">← Về trang chủ sổ tay</a></p>
+<footer>Sổ tay quản lý cửa hàng.</footer>
+</main>
+</body>
+</html>
