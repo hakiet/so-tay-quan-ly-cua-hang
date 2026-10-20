@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quản lý khách sạn, nhà hàng: lịch phòng, dịch vụ và doanh thu theo ca</title>
+<meta name="description" content="Quy trình quản lý khách sạn mini, nhà hàng: quản lý lịch phòng, check-in/out, dịch vụ ăn uống, đối chiếu doanh thu theo ca.">
+<link rel="canonical" href="https://hakiet.github.io/so-tay-quan-ly-cua-hang/quan-ly-khach-san-nha-hang.html">
+<style>
+:root{--ink:#17202a;--muted:#5b6b7b;--line:#e2e8ee;--bg:#fbfcfd;--accent:#0b6bcb}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:40px 20px 80px}
+h1{font-size:2rem;line-height:1.2;margin:0 0 .4em}
+h2{font-size:1.25rem;margin:2em 0 .5em}
+p{margin:0 0 1em}
+a{color:var(--accent)}
+.lead{font-size:1.08rem;color:var(--muted)}
+ul,ol{padding-left:1.2em}
+li{margin:.4em 0}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:.95rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f1f5f9}
+footer{margin-top:3em;padding-top:1.5em;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<main>
+<h1>Khách sạn mini, nhà hàng: quản lý lịch phòng và doanh thu theo ca</h1>
+<p class="lead">Khách sạn nhỏ lãi ở tỉ lệ lấp phòng, nhà hàng lãi ở tốc độ phục vụ. Cả hai đều thất thoát khi ca bàn giao không có số liệu đối chiếu.</p>
+<h2>1. Lịch phòng: trạng thái phải rõ, không suy đoán</h2>
+<p>Mỗi phòng phải có trạng thái cập nhật: trống, đã đặt, đang ở, đang dọn, bảo trì. Khách sạn nhỏ thường ghi lịch trong nhóm chat — đó là nguồn lỗi lớn nhất vì không ai biết phòng nào đang ở tình trạng nào lúc 22h.</p>
+<p>Quy tắc bất di bất dịch: phòng chỉ được chuyển sang "đã đặt" khi có tiền cọc hoặc xác nhận. Lịch miễn phí không giữ phòng.</p>
+
+<h2>2. Check-in và check-out: ba bước, ba chữ ký</h2>
+<ol>
+<li><strong>Check-in:</strong> xác minh giấy tờ, ghi số phòng thực tế, ghi giờ vào — và chục lại hiện trạng phòng nếu có thể.</li>
+<li><strong>Trong lưu trú:</strong> mọi khoản phát sinh (minibar, giặt, ăn uống) phải vào hệ thống ngay, không ghi ra giấy rồi chuyển vào cuối ngày.</li>
+<li><strong>Check-out:</strong> đối chiếu phiếu với hệ thống, xác nhận, ghi giờ ra.</li>
+</ol>
+<p>Nếu ba bước này ghi bằng giấy và chuyển vào sau, bạn sẽ không biết mình lỗ ở khâu nào khi tháng cuối không khớp.</p>
+
+<h2>3. Giá theo ngày, theo tuần, theo đêm</h2>
+<p>Có ba tệp giá phổ biến: theo đêm, theo ngày (bao gồm đêm), và theo tuần. Nếu chỉ có một đơn vị, khách sẽ chọn cách rẻ nhất và tốn công xử lý. Nhà hàng có ngày lễ, cuối tuần, ngày thường — cần tối thiểu ba bảng giá theo ngày trong tuần.</p>
+
+<h2>4. Nhà hàng: đối chiếu ca bằng ba số</h2>
+<table>
+<tr><th>Số liệu</th><th>Nguồn</th><th>Kiểm tra</th></tr>
+<tr><td>Tổng số bàn phục vụ</td><td>Hệ thống ghi bàn</td><td>Khớp số phiếu</td></tr>
+<tr><td>Tổng doanh thu</td><td>Phiếu thu</td><td>Khớp tổng tiền mặt + chuyển khoản</td></tr>
+<tr><td>Số món bán lẻ kèm</td><td>Xuất kho</td><td>Khớp tồn kho cuối ca</td></tr>
+</table>
+<p>Ba số phải khớp trong cùng một ca. Lệch ở số thứ ba thường là bán lẻ không qua bill — và đó là chỗ mất tiền âm thầm nhất.</p>
+
+<h2>5. Nhà hàng: giá theo nhóm khách</h2>
+<p>Ba mức giá thường tồn tại: nhóm khách, nhóm bàn, và giá niêm yết. Khi bàn 6 người ngồi 4 mà tính 4 phần thì khách mất niềm tin; khi tính 6 phần cho bàn 4 người thì bạn tự hủy lợi nhuận. Quy tắc nên viết thành văn bản, dán ở kho thu ngân, và tra ra mỗi ca mới.</p>
+
+<h2>Đọc thêm</h2>
+<ul>
+  <li><a href="https://www.phanmempos.com/phan-mem-quan-ly-khach-san-ket-noi-ota-giai-phap-toi-uu-hoa-doanh-thu-va-trai-nghiem-khach-hang">Khách sạn kết nối OTA: đồng bộ phòng và giá</a></li>
+  <li><a href="https://www.phanmempos.com/phan-mem-ban-hang-offline-cho-nha-hang-giai-phap-toi-uu-cho-kinh-doanh-khong-gian-doan">Nhà hàng không gian doanh: vận hành tối ưu</a></li>
+</ul>
+
+<p>Khi số lượng hàng, ca và khách đủ lớn, sổ tay giấy bắt đầu thua thiệt. Lúc đó nên dùng <a href="https://www.phanmempos.com/san-pham/phan-mem-quan-ly-khach-san-mini-offline-toi-uu-van-hanh-tang-truong-doanh-thu">quản lý khách sạn mini</a>, <a href="https://www.phanmempos.com/san-pham/phan-mem-ban-hang-offline-cho-nha-hang-giai-phap-toi-uu-cho-kinh-doanh-khong-gian-doan">bán hàng offline cho nhà hàng</a>.</p>
+<p><a href="index.html">← Về trang chủ sổ tay</a></p>
+<footer>Sổ tay quản lý cửa hàng.</footer>
+</main>
+</body>
+</html>

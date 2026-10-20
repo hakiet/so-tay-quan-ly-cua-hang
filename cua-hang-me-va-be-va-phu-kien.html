@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cửa hàng mẹ và bé, cửa hàng phụ kiện: quản lý mã hàng và tồn kho nhiều mã</title>
+<meta name="description" content="Quy trình quản lý cửa hàng mẹ và bé, cửa hàng phụ kiện: hàng nhiều size, hàng dùng một lần, tồn kho theo màu và size.">
+<link rel="canonical" href="https://hakiet.github.io/so-tay-quan-ly-cua-hang/cua-hang-me-va-be-va-phu-kien.html">
+<style>
+:root{--ink:#17202a;--muted:#5b6b7b;--line:#e2e8ee;--bg:#fbfcfd;--accent:#0b6bcb}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:40px 20px 80px}
+h1{font-size:2rem;line-height:1.2;margin:0 0 .4em}
+h2{font-size:1.25rem;margin:2em 0 .5em}
+p{margin:0 0 1em}
+a{color:var(--accent)}
+.lead{font-size:1.08rem;color:var(--muted)}
+ul,ol{padding-left:1.2em}
+li{margin:.4em 0}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:.95rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f1f5f9}
+footer{margin-top:3em;padding-top:1.5em;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<main>
+<h1>Cửa hàng mẹ và bé, cửa hàng phụ kiện: quản lý mã hàng theo size và màu</h1>
+<p class="lead">Hai mô hình này khó ở cùng một chỗ: mỗi sản phẩm không phải một mã mà là một lưới size × màu. Quản lý tồn kho kiểu "một dòng một sản phẩm" sẽ hỏng ngay khi số mã lên tới vài trăm.</p>
+<h2>1. Mã hàng = sản phẩm + size + màu</h2>
+<p>Quy tắc nhất quán: mỗi tổ hợp size và màu là một mã riêng, có mã vạch riêng. Nếu dùng mã chung, tồn kho chỉ nói được "còn hàng" chứ không nói được "còn size M màu đen" — và nhân viên phải đi tìm, hoặc bán nhầm rồi đổi trả.</p>
+
+<h2>2. Hàng dùng một lần: vòng quay càng nhanh càng dễ mất tiền</h2>
+<p>Quần áo trẻ sơ sinh, tã, giấy vệ sinh — cỡ này hết hạn hoàn toàn theo mốc, và hết hạn ở mỹ phẩm trẻ em còn bị coi là sự cố. Vì vậy cần quy tắc FIFO tuyệt đối, và phải kiểm tra hạn dùng ở quầy, không chỉ trong kho.</p>
+<p>Nếu quầy thu ngân không cảnh báo hết hạn, việc kiểm kê trong kho sẽ phát hiện ra quá muộn — hàng đã đến tay khách.</p>
+
+<h2>3. Bán theo bộ: quy tắc tồn kho khó nhất</h2>
+<p>Bộ đồ, bộ phụ kiện, set chăm sóc: khách mua theo bộ, nhưng tồn kho nằm rải rác. Có hai cách xử lý:</p>
+<ul>
+<li><strong>Đếm theo bộ</strong>: nhập và bán nguyên bộ, đơn giản nhưng tồn kho dễ vỡ khi bộ bị bung ra.</li>
+<li><strong>Đếm theo mã đơn vị</strong>: linh hoạt, xử lý được bán lẻ, nhưng phải có cách chặn bán thiếu thành phần (bán 2/3 bộ thì không cho chốt).</li>
+</ul>
+<p>Chọn một cách và giữ nguyên. Trộn hai cách là nguồn chênh lệch tồn kho khó truy nhất.</p>
+
+<h2>4. Trả hàng: tỉ lệ trả hàng là chỉ số chất lượng size</h2>
+<p>Trong cửa hàng mẹ và bé, tỉ lệ đổi size cao là báo hiệu bảng size không khớp thực tế — thường do nhập tỷ lệ size theo cảm tính thay vì theo dữ liệu bán thực tế. Lưu lại tỉ lệ bán theo size, và cải thiện đơn hàng nhập hợp lý hơn là giảm giá cho khách đổi.</p>
+
+<h2>5. Hàng khách đặt trước: cần quy trình riêng</h2>
+<p>Đặt trước là kênh bán tốt nhưng dễ lẫn với tồn kho nếu không phân biệt. Hàng đặt trước phải nằm ở trạng thái riêng, và khi khách không đến nhận, hàng phải quay lại tồn bán được chứ không bị ghi thành mất.</p>
+
+<h2>Đọc thêm</h2>
+<ul>
+  <li><a href="https://www.phanmempos.com/phan-mem-pos-cho-me-va-be-giai-phap-quan-ly-cua-hang-hieu-qua-nhat">POS cho cửa hàng mẹ và bé</a></li>
+  <li><a href="https://www.phanmempos.com/phan-mem-quan-ly-cua-hang-phu-kien-bi-quyet-tang-doanh-so-tiet-kiem-thoi-gian">Quản lý cửa hàng phụ kiện tiết kiệm thời gian</a></li>
+</ul>
+
+<p>Khi số lượng hàng, ca và khách đủ lớn, sổ tay giấy bắt đầu thua thiệt. Lúc đó nên dùng <a href="https://www.phanmempos.com/san-pham/ebiz-giai-phap-phan-mem-ban-hang-offline-toan-dien-cho-cua-hang-me-va-be-cham-soc-khach-hang-tron-ven">quản lý bán hàng cửa hàng mẹ và bé</a>, <a href="https://www.phanmempos.com/san-pham/ebiz-giai-phap-phan-mem-ban-hang-offline-quan-ly-toan-dien-cho-cua-hang-phu-kien-toi-uu-hoa-hoat-dong-kinh-doanh">quản lý bán hàng cửa hàng phụ kiện</a>.</p>
+<p><a href="index.html">← Về trang chủ sổ tay</a></p>
+<footer>Sổ tay quản lý cửa hàng.</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quản lý vận hành chung: nhân viên, phân quyền, và báo cáo cuối ngày</title>
+<meta name="description" content="Quy trình quản lý vận hành chung cho cửa hàng: phân quyền nhân viên, báo cáo cuối ngày, kiểm soát tiền mặt và quyết định dựa trên số liệu.">
+<link rel="canonical" href="https://hakiet.github.io/so-tay-quan-ly-cua-hang/quan-ly-van-hanh-chung-cho-cua-hang.html">
+<style>
+:root{--ink:#17202a;--muted:#5b6b7b;--line:#e2e8ee;--bg:#fbfcfd;--accent:#0b6bcb}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:40px 20px 80px}
+h1{font-size:2rem;line-height:1.2;margin:0 0 .4em}
+h2{font-size:1.25rem;margin:2em 0 .5em}
+p{margin:0 0 1em}
+a{color:var(--accent)}
+.lead{font-size:1.08rem;color:var(--muted)}
+ul,ol{padding-left:1.2em}
+li{margin:.4em 0}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:.95rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f1f5f9}
+footer{margin-top:3em;padding-top:1.5em;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<main>
+<h1>Vận hành chung: phân quyền, báo cáo cuối ngày, quyết định bằng số liệu</h1>
+<p class="lead">Sổ tay này đã đi qua tồn kho, tiền mặt, ca, lãi lỗ, công nợ, giá và bảo hành. Bài cuối chốt lại phần mà các bài trước đều giả định có: ai làm việc gì, và ai đọc báo cáo.</p>
+<h2>1. Phân quyền: bốn quyền, không phải mười</h2>
+<table>
+<tr><th>Quyền</th><th>Ai nên có</th><th>Kiểm soát bằng</th></tr>
+<tr><td>Xem giá và giảm giá</td><td>Quản lý ca</td><td>Mức giảm tối đa theo vai trò</td></tr>
+<tr><td>Hủy đơn, trả hàng</td><td>Quản lý ca</td><td>Nhật ký thao tác có tên người</td></tr>
+<tr><td>Sửa giá vốn, xuất kho</td><td>Chủ cửa hàng</td><td>Không cấp quyền cho ca</td></tr>
+<tr><td>Xem báo cáo lãi lỗ</td><td>Chủ cửa hàng</td><td>Phân tách quyền xem</td></tr>
+</table>
+<p>Nguyên tắc: càng nhiều người biết càng nhiều thao tác càng dễ xảy ra sai sót không chủ ý. Quyền hủy đơn và quyền sửa giá vốn nên tách người.</p>
+
+<h2>2. Báo cáo cuối ngày: năm số, một trang</h2>
+<ul>
+<li>Doanh thu hôm nay so với cùng kỳ tuần trước</li>
+<li>Tổng lãi gộp ước tính (nếu đã cập nhật giá vốn)</li>
+<li>Số món hủy / trả hàng và lý do</li>
+<li>Chênh lệch tiền mặt quầy</li>
+<li>Mã hàng bán chạy nhất và mã hàng tồn nhiều nhất</li>
+</ul>
+<p>Nếu báo cáo dài hơn một trang, không ai đọc. Nếu phải làm lâu hơn 10 phút, không ai làm. Thiết kế từ đầu theo hai ràng buộc đó.</p>
+
+<h2>3. Quyết định dựa trên số liệu: vòng lặp tuần</h2>
+<p>Mỗi tuần chủ cửa hàng xem đúng ba câu hỏi: mã nào tồn nhiều mà bán chậm, mã nào lãi cao nhưng ít hàng, và chỗ nào đang lỗ mà không ai nói. Mỗi tuần ra đúng một quyết định thay đổi. Một quyết định mỗi tuần thay vì năm quyết định mỗi tháng là khác biệt giữa cửa hàng cải thiện và cửa hàng đứng yên.</p>
+
+<h2>4. Nhân viên mới: tuần đầu chỉ bán, không chỉnh sửa</h2>
+<p>Tuần đầu nhân viên mới chỉ được bán hàng và ghi chú. Quyền hủy đơn và sửa giá chỉ mở khi đã thành thạo. Sai sót tuần đầu gần như luôn xảy ra; quy trình nên giảm thiểu hậu quả thay vì cố ngăn lỗi bằng giấy phép.</p>
+
+<h2>5. Khi nào mới cần phần mềm</h2>
+<p>Ba dấu hiệu: số mã hàng vượt vài trăm, có nhiều ca chồng nhau, hoặc báo cáo cuối ngày mất quá 20 phút. Trước ba dấu hiệu này, bảng tính vẫn là lựa chọn đúng — và đừng chuyển sang phần mềm chỉ vì nó "chuyên nghiệp hơn". Phần mềm chỉ đáng giá khi nó làm một việc mà bảng tính không làm được nữa.</p>
+
+<h2>Đọc thêm</h2>
+<ul>
+  <li><a href="https://www.phanmempos.com/nang-tam-trai-nghiem-khach-hang-bi-quyet-giu-chan-va-phat-trien-kinh-doanh-ben-vung">Nâng tầm trải nghiệm khách hàng</a></li>
+  <li><a href="https://www.phanmempos.com/bi-quyet-nang-tam-doanh-nghiep-chon-phan-mem-quan-ly-ban-hang-va-bao-cao-hieu-qua">Chọn phần mềm quản lý bán hàng và báo cáo</a></li>
+</ul>
+
+<p>Khi số lượng hàng, ca và khách đủ lớn, sổ tay giấy bắt đầu thua thiệt. Lúc đó nên dùng <a href="https://www.phanmempos.com/san-pham/ebiz-phan-mem-offline-ban-hang-giai-phap-vang-cho-ho-kinh-doanh-on-dinh-hieu-qua-but-pha-doanh-so">bán hàng offline cho hộ kinh doanh</a>, <a href="https://www.phanmempos.com/san-pham/ebiz-giai-phap-phan-mem-pos-quan-ly-ban-le-offline-toan-dien-toi-uu-cho-moi-mo-hinh-kinh-doanh">POS quản lý bán lẻ offline</a>, <a href="https://www.phanmempos.com/san-pham/phan-mem-quan-ly-kho-offline-kiem-soat-ton-kho-giam-that-thoat-hieu-qua">quản lý kho offline</a>.</p>
+<p><a href="index.html">← Về trang chủ sổ tay</a></p>
+<footer>Sổ tay quản lý cửa hàng.</footer>
+</main>
+</body>
+</html>

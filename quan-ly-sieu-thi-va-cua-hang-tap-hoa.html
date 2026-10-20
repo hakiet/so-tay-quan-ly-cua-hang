@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quản lý siêu thị và cửa hàng tạp hóa: tồn kho, hạn dùng, giá vốn</title>
+<meta name="description" content="Quy trình quản lý siêu thị, cửa hàng tạp hóa: tồn kho nhiều mã, hàng hạn dùng, giá vốn theo nhóm, kiểm kê quay vòng.">
+<link rel="canonical" href="https://hakiet.github.io/so-tay-quan-ly-cua-hang/quan-ly-sieu-thi-va-cua-hang-tap-hoa.html">
+<style>
+:root{--ink:#17202a;--muted:#5b6b7b;--line:#e2e8ee;--bg:#fbfcfd;--accent:#0b6bcb}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:40px 20px 80px}
+h1{font-size:2rem;line-height:1.2;margin:0 0 .4em}
+h2{font-size:1.25rem;margin:2em 0 .5em}
+p{margin:0 0 1em}
+a{color:var(--accent)}
+.lead{font-size:1.08rem;color:var(--muted)}
+ul,ol{padding-left:1.2em}
+li{margin:.4em 0}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:.95rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f1f5f9}
+footer{margin-top:3em;padding-top:1.5em;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<main>
+<h1>Siêu thị, tạp hóa: quản lý tồn kho nhiều mã mà không chết dữ liệu</h1>
+<p class="lead">Cửa hàng tạp hóa lỗ không phải vì bán ế, mà vì mất tiền ở ba chỗ: hàng quay vòng chết trong kho, hàng hết hạn bị bán, và giá vốn cũ làm tưởng đang lãi.</p>
+<h2>1. Tồn kho nhiều mã: phân nhóm trước, đếm sau</h2>
+<p>Không thể kiểm kê 3.000 mã mỗi tháng. Cách duy nhất khả thi là chia theo nhóm ABC (xem bài báo cáo lãi lỗ theo mặt hàng), rồi kiểm kê theo tần suất: nhóm A đếm hằng tuần, nhóm B hằng tháng, nhóm C hằng quý.</p>
+<p>Nguyên tắc: <strong>nhóm C đếm ít nhưng phải đếm đúng</strong>. Nhóm C chiếm 70% số mã nhưng chỉ 10% giá trị — đếm sai ở đây ít tốn tiền, nhưng nếu cả nhóm bị bỏ qua thì hết hàng bán được vẫn không ai biết.</p>
+
+<h2>2. Hàng hạn dùng: quy tắc FIFO và cách xử lý hàng tồn</h2>
+<p>Hàng tạp hóa mất tiền chủ yếu vì hết hạn chứ không vì hư. Hai việc phải làm song song:</p>
+<ul>
+<li><strong>Sắp xếp theo FIFO thật</strong> — hàng vào trước ra trước, kể cả khi FIFO làm mất tiền hơn FEFO. Với hàng bán nhanh, FIFO vẫn đúng.</li>
+<li><strong>Lập bảng theo dõi hạn dùng</strong> — chia làm 3 nhóm: còn hạn trên 3 tháng (xuất bán bình thường), còn hạn dưới 3 tháng (ưu tiên bán, đặt ở mặt kệ gần tay), gần hạn (tách riêng, giảm giá hoặc xử lý nội bộ).</li>
+</ul>
+<p>Hàng còn hạn dưới 3 tháng đặt ở mặt kệ gần tay tạo hiệu ứng tốt hơn nhiều so với giảm giá. Khách mua theo thị hiếu, không theo ngày hết hạn.</p>
+
+<h2>3. Giá vốn: cập nhật theo nhóm, không cập nhật từng mã</h2>
+<p>Giá thực tế thay đổi liên tục ở nhóm tươi sống và ngũ cốc. Cập nhật từng mã mỗi tháng là việc không ai làm nổi. Cách khả thi: cập nhật <strong>bảng giá vốn theo nhóm</strong> mỗi quý, và ghi nhận biến động giá đầu vào theo phiếu nhập.</p>
+<p>Nếu chỉ làm một việc trong quý, hãy làm việc này — báo cáo lãi lỗ theo mặt hàng chỉ đúng nếu giá vốn đúng.</p>
+
+<h2>4. Kiểm kê quay vòng theo nhóm A</h2>
+<p>Thay vì một lần kiểm kê cả cửa hàng, chia quý thành nhiều đợt: mỗi tuần kiểm kê một phần nhóm A. Ưu điểm: chênh lệch được phát hiện gần thời điểm xảy ra, và không dồn toàn bộ công việc vào một đêm.</p>
+
+<h2>5. Bán theo lô gần hạn: dùng máy, không dùng ý</h2>
+<p>Quy tắc "gần hạn thì bán rẻ hơn" dễ bị lạm dụng thành mất tiền đều. Nên đặt ngưỡng rõ ràng: mức giảm tối đa theo nhóm, và chỉ áp dụng cho hàng đã qua bốn tuần gần hạn. Người bán không cần ra quyết định giảm giá mỗi lần — quy tắc viết sẵn, máy chạy, người chỉ xác nhận.</p>
+
+<h2>Đọc thêm</h2>
+<ul>
+  <li><a href="https://www.phanmempos.com/toi-uu-ton-kho-bi-quyet-vang-giup-doanh-nghiep-tang-loi-nhuan-va-van-hanh-hieu-qua">Tối ưu tồn kho: vòng quay và vốn nhúng</a></li>
+  <li><a href="https://www.phanmempos.com/phan-mem-quan-ly-sieu-thi-giai-phap-toi-uu-hoat-dong-khong-can-internet">Quản lý siêu thị khi internet chập chờn</a></li>
+</ul>
+
+<p>Khi số lượng hàng, ca và khách đủ lớn, sổ tay giấy bắt đầu thua thiệt. Lúc đó nên dùng <a href="https://www.phanmempos.com/san-pham/phan-mem-quan-ly-sieu-thi-offline-toi-uu-hoa-van-hanh-tang-truong-doanh-so-pos-ebiz">quản lý siêu thị offline</a>, <a href="https://www.phanmempos.com/san-pham/phan-mem-ban-hang-offline-cho-ho-kinh-doanh-giai-phap-toi-uu-de-quan-ly-hieu-qua-va-but-pha-doanh-thu">quản lý bán hàng cho hộ kinh doanh</a>.</p>
+<p><a href="index.html">← Về trang chủ sổ tay</a></p>
+<footer>Sổ tay quản lý cửa hàng.</footer>
+</main>
+</body>
+</html>
