@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quản lý tồn kho nhiều chi nhánh: chuyển hàng, định mức, tồn âm</title>
+<meta name="description" content="Quy trình quản lý tồn kho khi có nhiều điểm bán: định mức tồn theo chi nhánh, chuyển hàng giữa các điểm, xử lý tồn âm và báo cáo tồn thời gian thực.">
+<link rel="canonical" href="https://hakiet.github.io/so-tay-quan-ly-cua-hang/quan-ly-ton-kho-nhieu-chi-nhanh.html">
+<style>
+:root{--ink:#17202a;--muted:#5b6b7b;--line:#e2e8ee;--bg:#fbfcfd;--accent:#0b6bcb}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:40px 20px 80px}
+h1{font-size:2rem;line-height:1.2;margin:0 0 .4em}
+h2{font-size:1.25rem;margin:2em 0 .5em}
+p{margin:0 0 1em}
+a{color:var(--accent)}
+.lead{font-size:1.08rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:.95rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left}
+th{background:#f1f5f9}
+footer{margin-top:3em;padding-top:1.5em;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<main>
+<h1>Quản lý tồn kho nhiều chi nhánh: chuyển hàng, định mức, tồn âm</h1>
+<p class="lead">Một cửa hàng thì sai số tồn là chuyện nhỏ. Ba cửa hàng dùng chung một kho thì sai số tồn là câu hỏi "hàng đang ở đâu" không ai trả lời được.</p>
+
+<h2>Định mức tồn theo từng chi nhánh</h2>
+<p>Định mức tồn (min/max) phải đặt riêng cho từng điểm bán, không đặt chung. Quầy cửa số 1 bán gấp đôi quầy số 2 thì chung một định mức sẽ khiến một quầy hết hàng lúc quầy kia ngồi trên hàng.</p>
+<p>Ngưỡng cảnh báo đặt cao hơn nhu cầu bán hằng tuần khoảng 1,5 lần — đủ để chịu một lần nhập chậm mà không tồn dư quá nhiều.</p>
+
+<h2>Chuyển hàng giữa các điểm: luôn có phiếu, luôn có 2 chữ ký</h2>
+<p>Chuyển kho nội bộ giữa chi nhánh là lúc dễ thất thoát nhất, vì cả hai đầu đều nghĩ "chi nhánh kia xử lý". Quy trình tối thiểu:</p>
+<ol>
+<li>Chi nhánh gửi yêu cầu, nêu rõ mã hàng và số lượng.</li>
+<li>Chi nhánh nhận xác nhận đã xuất — ghi rõ thời điểm xuất và biên bản kèm theo.</li>
+<li>Chi nhánh nhận xác nhận đã nhận — ghi rõ thời điểm nhận, tình trạng thực tế (có thể thiếu, hư hỏng).</li>
+<li>Hai bên ghi vào sổ chuyển kho với cùng một mã phiếu.</li>
+</ol>
+<p>Hàng vận chuyển giữa các điểm không nên nằm trong tồn của cả hai đầu cùng lúc, và cũng không nên biến mất khỏi sổ. Đặt nó vào một trạng thái riêng: "đang chuyển". Khi khớp, tồn tổng toàn hệ thống luôn bằng tổng tồn thực tế.</p>
+
+<h2>Tồn âm: dấu hiệu hệ thống, không phải lỗi gõ</h2>
+<p>Tồn âm nghĩa là đã bán nhiều hơn số đang có trong sổ. Nguyên nhân thường gặp theo thứ tự xác suất:</p>
+<ul>
+<li>Bán hàng nhưng chưa cập nhật tồn (chế độ bán offline không đồng bộ kho).</li>
+<li>Chuyển kho chưa ghi nhận một đầu.</li>
+<li>Nhập hàng ghi nhầm mã, dẫn tới trừ nhầm món khác.</li>
+<li>Hàng còn trên kệ nhưng đã bị bán ở quầy khác trong lúc mạng chậm.</li>
+</ul>
+<p>Tồn âm không được "sửa bằng cách cho về 0". Phải truy để tìm món nào thực sự còn, rồi điều chỉnh có ghi chú. Nếu tồn âm xuất hiện thường xuyên ở một mã, nguyên nhân gốc là quy trình, không phải con người.</p>
+
+<h2>Đồng bộ khi mạng chậm hoặc mất</h2>
+<p>Mô hình nhiều quầy thường có lúc mất mạng. Khi đó, bán hàng vẫn phải chạy, và dữ liệu phải đồng bộ lại sau. Hai lựa chọn:</p>
+<ul>
+<li><strong>Đồng bộ khi có mạng</strong>: mỗi giao dịch được đẩy lên ngay khi có kết nối, thứ tự giữ nguyên. Cần xử lý xung đột khi hai quầy cùng bán món cuối cùng.</li>
+<li><strong>Đồng bộ theo lô</strong>: quầy tải toàn bộ tồn về trước ca, xử lý xung đột khi tải lại. Đơn giản hơn nhưng phải có quy tắc "tồn âm lúc tải" rõ ràng.</li>
+</ul>
+<p>Không có lựa chọn nào loại bỏ được xung đột. Cái cần quyết định trước là: khi xung đột xảy ra, ai thắng và thông báo cho ai, để không có hai quầy cùng bán món đó và không có ai bị thông báo quá muộn.</p>
+<p>Các mô hình đa quầy như <a href="https://www.phanmempos.com/san-pham/ebiz-phan-mem-ban-hang-offline-cho-shop-thoi-trang-quan-ao-giay-dep-cua-ban">shop thời trang nhiều điểm bán</a> hay <a href="https://www.phanmempos.com/san-pham/phan-mem-quan-ly-kho-offline-kiem-soat-ton-kho-giam-that-thoat-hieu-qua">quản lý kho tập trung</a> đều cần phần quản lý tồn theo chi nhánh; nếu đang phân vân, xem cách <a href="https://www.phanmempos.com/san-pham/phan-mem-quan-ly-ban-hang-offline-ebiz-pos">phần mềm quản lý bán hàng offline</a> xử lý chuyển kho và tồn âm.</p>
+
+<p><a href="index.html">← Về trang chủ sổ tay</a></p>
+<footer>Sổ tay quản lý cửa hàng.</footer>
+</main>
+</body>
+</html>

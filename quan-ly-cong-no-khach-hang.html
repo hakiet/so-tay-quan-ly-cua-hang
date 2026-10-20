@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quản lý công nợ khách hàng: hạn mức tín dụng, hạn trả nợ, thu hồi</title>
+<meta name="description" content="Quy trình quản lý công nợ khách lẻ cho cửa hàng: đặt hạn mức tín dụng theo khách, theo dõi hạn trả nợ, quy tắc thu hồi và sai sót thường gặp.">
+<link rel="canonical" href="https://hakiet.github.io/so-tay-quan-ly-cua-hang/quan-ly-cong-no-khach-hang.html">
+<style>
+:root{--ink:#17202a;--muted:#5b6b7b;--line:#e2e8ee;--bg:#fbfcfd;--accent:#0b6bcb}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:40px 20px 80px}
+h1{font-size:2rem;line-height:1.2;margin:0 0 .4em}
+h2{font-size:1.25rem;margin:2em 0 .5em}
+p{margin:0 0 1em}
+a{color:var(--accent)}
+.lead{font-size:1.08rem;color:var(--muted)}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:.95rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left}
+th{background:#f1f5f9}
+footer{margin-top:3em;padding-top:1.5em;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<main>
+<h1>Quản lý công nợ khách hàng: hạn mức tín dụng, hạn trả nợ, thu hồi</h1>
+<p class="lead">Cho mua thiếu tiền là bán trả góp. Không có quy tắc thì nó thành cho mượn không rõ điều kiện — và mỗi đồng nợ đều trở thành tiền nằm im trong túi khách.</p>
+
+<h2>Ba thứ phải ghi với mỗi khoản nợ</h2>
+<p><strong>Ai</strong> (khách nào), <strong>bao nhiêu</strong> (số tiền), và <strong>khi nào trả</strong> (hạn). Thiếu một trong ba thứ, khoản nợ đó sẽ không bao giờ được thu hồi đúng. Trong mọi hệ thống bán hàng, đơn bán nợ phải bắt buộc nhập ba trường này — nếu phần mềm cho phép bán nợ mà không cần hạn trả, thì quy trình đó sẽ bị lợi dụng.</p>
+
+<h2>Hạn mức tín dụng: đặt theo khách, không đặt theo cảm xúc</h2>
+<p>Thiết lập một bảng hạn mức theo nhóm khách:</p>
+<table>
+<tr><th>Nhóm khách</th><th>Hạn mức</th><th>Hạn trả</th><th>Điều kiện</th></tr>
+<tr><td>Khách lẻ mới</td><td>Không nợ</td><td>—</td><td>Chuyển khoản / thẻ</td></tr>
+<tr><td>Khách quen, đã trả đúng</td><td>500k – 1 triệu</td><td>7 ngày</td><td>Không cần duyệt</td></tr>
+<tr><td>Khách cũ, nợ đúng hạn</td><td>3 triệu</td><td>15 ngày</td><td>Ca trưởng duyệt</td></tr>
+<tr><td>Khách doanh nghiệp</td><td>Thoả thuận</td><td>30 ngày</td><td>Chủ duyệt, hợp đồng</td></tr>
+</table>
+<p>Nhóm khách nâng hạn mức dựa trên lịch sử trả nợ thực tế, không dựa trên quan hệ. "Anh mua nhiều" không phải tiêu chí; "anh trả đúng hạn 6 lần liên tiếp" mới là tiêu chí.</p>
+
+<h2>Theo dõi hạn trả nợ</h2>
+<p>Mỗi sáng mở cửa, xem một danh sách duy nhất: những khoản nợ sắp đến hạn trong 7 ngày. Với mỗi khoản, thu tiền hoặc gọi nhắc. Trì hoãn việc nhắc là nguyên nhân phổ biến nhất khiến nợ tốt 200 nghìn thành nợ mất 2 triệu — không phải vì khách mất khả năng trả, mà vì không ai nhắc đúng lúc.</p>
+<p>Với nợ quá hạn: ghi nhận sớm, không xóa. Một khoản nợ 30 ngày chưa trả vẫn nên nằm trong sổ để theo dõi, kể cả khi bạn đã quyết định không thu được nữa.</p>
+
+<h2>Quy tắc thu hồi</h2>
+<p>Quy tắc viết trước, dán ở quầy, khách đọc được ngay khi mua: hạn trả là ngày nào; quá 7 ngày sẽ tạm ngừng bán nợ cho tới khi thanh toán; mọi khoản nợ cũ hơn 30 ngày được chuyển sang xử lý riêng. Không có quy tắc công khai, mọi cuộc gọi nhắc nợ sau đó đều là tranh chấp.</p>
+
+<h2>Con số cần theo dõi</h2>
+<ul>
+<li>Tỷ lệ nợ trên tổng doanh thu theo tháng. Tăng đều = hạn mức đang nới quá tay.</li>
+<li>Số ngày trung bình để thu hồi một khoản nợ. Mục tiêu dưới 10 ngày.</li>
+<li>Tỷ lệ khách nợ quá hạn trên tổng số khách nợ. Cao = bạn đang bán cho người không quay lại.</li>
+</ul>
+<p>Khi cửa hàng bán nợ nhiều, việc theo dõi phải gắn tự động với từng đơn thay vì sổ tay. Nhiều mô hình bán lẻ offline đã chọn cách gắn hạn trả nợ ngay trên đơn, ví dụ <a href="https://www.phanmempos.com/san-pham/phan-mem-quan-ly-ban-hang-offline-ebiz-pos">phần mềm quản lý bán hàng offline</a> với chế độ bán nợ và nhắc hạn, hoặc <a href="https://www.phanmempos.com/san-pham/phan-mem-tinh-tien-beauty-salon-toc-don-gian-offline-quan-ly-de-dang-tang-hieu-qua">phiên bản cho salon làm đẹp</a> với cơ chế giữ lịch khách.</p>
+
+<p><a href="index.html">← Về trang chủ sổ tay</a></p>
+<footer>Sổ tay quản lý cửa hàng.</footer>
+</main>
+</body>
+</html>
